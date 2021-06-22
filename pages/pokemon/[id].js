@@ -1,5 +1,5 @@
 import PokemonDetails from "components/PokemonDetails";
-import PokemonStyle from "./pokemonStyle";
+import PokemonStyle from "pageStyles/pokemonStyle";
 import Link from "next/link";
 import PaginationButtons from "components/PaginationButtons";
 import PokemonContext from "Context/PokemonContext";
@@ -17,16 +17,12 @@ function Pokemon({ pokemon }) {
 
   return (
     <PokemonStyle>
-      <div className="prev-next">
-        {pokemon.id > 1 && (
-          <Link href={`/pokemon/${pokemon.id - 1}`}>
-            <button>PREVIOUS</button>
-          </Link>
-        )}
-        <Link href={`/pokemon/${pokemon.id + 1}`}>
-          <button className="next">NEXT</button>
-        </Link>
-      </div>
+      <PaginationButtons
+        prevHref={pokemon.id > 1 && `/pokemon/${pokemon.id - 1}`}
+        nextHref={`/pokemon/${pokemon.id + 1}`}
+        prevText="PREVIOUS"
+        nextText="NEXT"
+      />
 
       <PokemonDetails
         name={pokemon.name}

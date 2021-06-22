@@ -12,6 +12,7 @@ const ButtonStyle = styled.div`
     box-shadow: -5px 7px 9px 1px rgba(0, 0, 0, 0.17);
     font-weight: 600;
     color: white;
+    background-color: black;
     &:hover {
       cursor: pointer;
       box-shadow: -5px 7px 9px 1px rgba(0, 0, 0, 0.33);
@@ -20,11 +21,6 @@ const ButtonStyle = styled.div`
 
   .next {
     margin-left: auto;
-  }
-
-  button {
-    background-color: black;
-    padding: 12px 20px;
   }
 `;
 
