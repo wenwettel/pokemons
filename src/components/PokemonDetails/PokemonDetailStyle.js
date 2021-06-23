@@ -43,9 +43,14 @@ const PokemonDetailStyle = styled.div`
     max-width: 150px;
   }
 
-  @media screen and (max-width: 705px) {
-    grid-template-columns: 426px;
-    grid-template-rows: 212px 151px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto;
+  }
+
+  @media screen and (max-width: 576px) {
+    .description {
+      margin-bottom: 30px;
+    }
   }
 `;
 

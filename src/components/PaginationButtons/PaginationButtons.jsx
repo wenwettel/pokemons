@@ -1,16 +1,21 @@
 import ButtonStyle from "./PaginationButtonStyle";
 import Link from "next/link";
-function PaginationButtons({ prevHref, nextHref, prevText, nextText }) {
+import Button from "components/Button";
+function PaginationButtons({ prevHref, nextHref }) {
   return (
     <ButtonStyle>
       {prevHref && (
         <Link href={prevHref}>
-          <button>{prevText}</button>
+          <a>
+            <Button color="#000000">PREVIOUS</Button>
+          </a>
         </Link>
       )}
       {nextHref && (
         <Link href={nextHref}>
-          <button className="next">{nextText}</button>
+          <a className="next">
+            <Button color="#000000">NEXT</Button>
+          </a>
         </Link>
       )}
     </ButtonStyle>

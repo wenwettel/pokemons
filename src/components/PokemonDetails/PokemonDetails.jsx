@@ -4,8 +4,10 @@ import { capitalizeFirstLetter } from "utils/formatter";
 function PokemonDetails({ name, id, height, weight, abilities, types, image }) {
   return (
     <PokemonDetailStyle>
-      <img src={image} />
-
+      <div>
+        {" "}
+        <img src={image} />
+      </div>
       <div>
         <h1>
           {capitalizeFirstLetter(name)} <span>#{id}</span>

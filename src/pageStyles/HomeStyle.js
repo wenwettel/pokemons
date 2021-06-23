@@ -4,6 +4,11 @@ const HomeStyle = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px 0;
+  min-height: calc(100vh - 197px);
+  h2 {
+    margin-top: 50px;
+    color: #dd5d5d;
+  }
 
   a {
     color: black;
@@ -41,6 +46,11 @@ const HomeStyle = styled.div`
     grid-auto-rows: 202px;
     gap: 30px;
     justify-content: center;
+  }
+  @media screen and (max-width: 576px) {
+    h2 {
+      text-align: center;
+    }
   }
 `;
 
