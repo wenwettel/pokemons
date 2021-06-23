@@ -4,8 +4,6 @@ import { useState } from "react";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
   }
@@ -24,8 +22,20 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: "#0070f3",
+    white: "#ffffff",
+    black: "#000000",
   },
+  colorsType: {
+    grass: "#269b14",
+    poison: "#302c2c",
+    water: "#2649af",
+    fire: "#ea892e",
+    flying: "#33c1ce",
+    bug: "#1d770f",
+    normal: "#7c7575",
+  },
+
+  fontFamily: "'Roboto', sans-serif",
 };
 
 export default function App({ Component, pageProps }) {

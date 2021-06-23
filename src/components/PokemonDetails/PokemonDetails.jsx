@@ -20,14 +20,17 @@ function PokemonDetails({ name, id, height, weight, abilities, types, image }) {
 
           <div className="contain-type">
             <h4>Type</h4>
-            {types.length >= 1 &&
+            {types.length >= 1 ? (
               types.map((type) => {
                 return (
                   <TypeStyle type={type}>
                     <p>{capitalizeFirstLetter(type)}</p>{" "}
                   </TypeStyle>
                 );
-              })}
+              })
+            ) : (
+              <p>Without types</p>
+            )}
           </div>
 
           <div>
@@ -37,10 +40,13 @@ function PokemonDetails({ name, id, height, weight, abilities, types, image }) {
 
           <div>
             <h4>Abilities</h4>
-            {abilities.length >= 1 &&
+            {abilities.length >= 1 ? (
               abilities.map((ability) => (
                 <p>{capitalizeFirstLetter(ability)}</p>
-              ))}
+              ))
+            ) : (
+              <p>Without abilities</p>
+            )}
           </div>
         </div>
       </div>

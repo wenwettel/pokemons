@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ButtonStyle = styled.button`
-  font-family: "Roboto", sans-serif;
+  font-family: ${(props) => props.theme.fontFamily};
   padding: ${(props) => (props.big ? "12px 42px" : "12px 20px")};
   border-radius: 10px;
   border: 1px solid #bfbdbd;

@@ -11,7 +11,7 @@ const HomeStyle = styled.div`
   }
 
   a {
-    color: black;
+    color: ${(props) => props.theme.colors.black};
     text-decoration: none;
   }
   .bar-search {
